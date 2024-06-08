@@ -37,7 +37,7 @@ def secondClassRatio(filename):
 
 def margin(pred):
     topk_values, _ = torch.topk(pred, k=2)
-    metric_value = topk_values[0][0] - topk_values[0][1]  # 最大 - 次大
+    metric_value = topk_values[0][0] - topk_values[0][1]  # largest - second largest
     return metric_value.item()
 
 

@@ -107,7 +107,7 @@ def digits_ploy_convert():
     y_train = tf.keras.utils.to_categorical(y_train, 10)
     y_test = tf.keras.utils.to_categorical(y_test, 10)
 
-    model.load_weights('./pretrained/digits_plain_tf.h5')  # 载入权重
+    model.load_weights('./pretrained/digits_plain_tf.h5')
     model.compile(loss=tf.keras.losses.CategoricalCrossentropy(from_logits=True),
                 optimizer=tf.keras.optimizers.Adam(learning_rate=1e-3),
                 metrics=['accuracy'])
