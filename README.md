@@ -27,7 +27,11 @@ Code for data processing is in `./dataset`
 
 ![TenSEAL](./imgs/TenSEAL.svg)
 
+****
+
 ![Concrete](./imgs/Concrete.svg)
+
+****
 
 ![HElayers](./imgs/HElayers.svg)
 
