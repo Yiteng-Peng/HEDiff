@@ -30,15 +30,16 @@ def l2Value(filename):
 
 if __name__ == "__main__":
     # Table 5
-    # l2Value("ts_mnist_large")
-    # l2Value("ts_digits_large")
-    # l2Value("ts_credit")
-    # l2Value("ts_bank")
+    l2Value("ts_mnist")
+    l2Value("ts_digits")
+    l2Value("ts_credit")
+    l2Value("ts_bank")
 
+    l2Value("zama_mnist")
     l2Value("zama_digits")
     l2Value("zama_credit")
     l2Value("zama_bank")
 
-    # l2Value("helayer_mnist_large")
-    # l2Value("helayer_digits_large")
-    # l2Value("helayer_bank")
+    l2Value("helayer_mnist")
+    l2Value("helayer_digits")
+    l2Value("helayer_bank")
