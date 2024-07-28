@@ -72,7 +72,7 @@ def MarginBasedDifferentialTesting(mutation_method, mutation_num, seed_loader, p
         data, old_noise, label, mu_num = seedList.pop(0)
         mu_num += 1
 
-        noise = attacks.forward(data + old_noise)   
+        noise = attacks.forward(data + old_noise, label)   
         noise = old_noise + noise
         noise = torch.clamp(noise, min=-noise_bar, max=noise_bar)
         noise_data = torch.clamp(data + noise, min=0, max=1)
@@ -149,24 +149,38 @@ def Start(data_name, seed_filter, mutation_method, seed_num=800, mutation_num=40
 
 if __name__ == "__main__":
     Start("credit", "random", "random", seed_num=100, mutation_num=300, noise_bar = 0.01, iter_bar=0.003)
-    Start("credit", "margin", "random", seed_num=100, mutation_num=300, noise_bar = 0.01, iter_bar=0.003)
+    Start("credit", "random", "pgd",    seed_num=100, mutation_num=300, noise_bar = 0.01, iter_bar=0.003)
     Start("credit", "random", "margin", seed_num=100, mutation_num=300, noise_bar = 0.01, iter_bar=0.003)
+    
+    Start("credit", "margin", "random", seed_num=100, mutation_num=300, noise_bar = 0.01, iter_bar=0.003)
+    Start("credit", "margin", "pgd",    seed_num=100, mutation_num=300, noise_bar = 0.01, iter_bar=0.003)
     Start("credit", "margin", "margin", seed_num=100, mutation_num=300, noise_bar = 0.01, iter_bar=0.003)
 
     
     Start("bank", "random", "random", seed_num=100, mutation_num=300, noise_bar = 0.01, iter_bar=0.003)
-    Start("bank", "margin", "random", seed_num=100, mutation_num=300, noise_bar = 0.01, iter_bar=0.003)
+    Start("bank", "random", "pgd",    seed_num=100, mutation_num=300, noise_bar = 0.01, iter_bar=0.003)
     Start("bank", "random", "margin", seed_num=100, mutation_num=300, noise_bar = 0.01, iter_bar=0.003)
+
+    Start("bank", "margin", "random", seed_num=100, mutation_num=300, noise_bar = 0.01, iter_bar=0.003)
+    Start("bank", "margin", "pgd",    seed_num=100, mutation_num=300, noise_bar = 0.01, iter_bar=0.003)
     Start("bank", "margin", "margin", seed_num=100, mutation_num=300, noise_bar = 0.01, iter_bar=0.003)
     
+    
     Start("digits", "random", "random", seed_num=100, mutation_num=300, noise_bar = 0.05, iter_bar = 0.03)
-    Start("digits", "margin", "random", seed_num=100, mutation_num=300, noise_bar = 0.05, iter_bar = 0.03)
+    Start("digits", "random", "pgd",    seed_num=100, mutation_num=300, noise_bar = 0.05, iter_bar = 0.03)
     Start("digits", "random", "margin", seed_num=100, mutation_num=300, noise_bar = 0.05, iter_bar = 0.03)
+
+    Start("digits", "margin", "random", seed_num=100, mutation_num=300, noise_bar = 0.05, iter_bar = 0.03)
+    Start("digits", "margin", "pgd",    seed_num=100, mutation_num=300, noise_bar = 0.05, iter_bar = 0.03)
     Start("digits", "margin", "margin", seed_num=100, mutation_num=300, noise_bar = 0.05, iter_bar = 0.03)
 
+
     Start("mnist", "random", "random", seed_num=100, mutation_num=300, noise_bar = 0.03, iter_bar = 0.01)
-    Start("mnist", "margin", "random", seed_num=100, mutation_num=300, noise_bar = 0.03, iter_bar = 0.01)
+    Start("mnist", "random", "pgd",    seed_num=100, mutation_num=300, noise_bar = 0.03, iter_bar = 0.01)
     Start("mnist", "random", "margin", seed_num=100, mutation_num=300, noise_bar = 0.03, iter_bar = 0.01)
+
+    Start("mnist", "margin", "random", seed_num=100, mutation_num=300, noise_bar = 0.03, iter_bar = 0.01)
+    Start("mnist", "margin", "pgd",    seed_num=100, mutation_num=300, noise_bar = 0.03, iter_bar = 0.01)
     Start("mnist", "margin", "margin", seed_num=100, mutation_num=300, noise_bar = 0.03, iter_bar = 0.01)
 
     print("mu_zama")

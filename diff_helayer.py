@@ -287,7 +287,7 @@ def Start(data_name, seed_num=800, mutation_num=4000, K_near=5, noise_bar = 0.05
 
     # exp step: important file save
     # pkl_filename = datetime.datetime.now().strftime(f"./corpus/ts_{data_name}(%m%d-%H%M%S).pkl")
-    pkl_filename = f"./corpus/helayer_{data_name}_large.pkl"
+    pkl_filename = f"./corpus/helayer_{data_name}.pkl"
     with open(pkl_filename, 'wb') as fp:
         pickle.dump(result_tuple, fp)
 
@@ -297,9 +297,9 @@ def Start(data_name, seed_num=800, mutation_num=4000, K_near=5, noise_bar = 0.05
 
 
 if __name__ == "__main__":
-    Start("credit", seed_num=1000, mutation_num=5000, K_near=3, noise_bar = 0.05, iter_bar=0.03)
-    Start("bank", seed_num=1000, mutation_num=5000, K_near=3, noise_bar = 0.03, iter_bar=0.01)
-    Start("digits", seed_num=500, mutation_num=2500, K_near=3, noise_bar = 0.07, iter_bar=0.03)
-    Start("mnist", seed_num=1000, mutation_num=5000, K_near=3, noise_bar = 0.03, iter_bar=0.01)
+    Start("credit", seed_num=1000, mutation_num=5000, K_near=1, noise_bar = 0.05, iter_bar=0.03)
+    Start("bank", seed_num=1000, mutation_num=5000, K_near=1, noise_bar = 0.03, iter_bar=0.01)
+    Start("digits", seed_num=500, mutation_num=2500, K_near=1, noise_bar = 0.05, iter_bar=0.03)
+    Start("mnist", seed_num=1000, mutation_num=5000, K_near=1, noise_bar = 0.03, iter_bar=0.01)
 
     print("diff_helayer")

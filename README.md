@@ -23,6 +23,14 @@ Bank: https://archive.ics.uci.edu/dataset/222/bank+marketing
 
 Code for data processing is in `./dataset`
 
+## Stealthiness Examples
+
+![TenSEAL](./imgs/TenSEAL.svg)
+
+![Concrete](./imgs/Concrete.svg)
+
+![HElayers](./imgs/HElayers.svg)
+
 ## Tips
 
 1. Dependency information

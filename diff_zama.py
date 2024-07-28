@@ -264,7 +264,7 @@ def Start(data_name, seed_num=800, mutation_num=4000, K_near=5, use_sim=True, no
     result_tuple = (sameList, muSameList, oriTrueDiffList, muTrueDiffList, patTrueDiffList, patternDict, seed_pattern_idx_list, mutationList)
 
     # exp step: important file save
-    pkl_filename = datetime.datetime.now().strftime(f"./corpus/zama_{data_name}(%m%d-%H%M%S).pkl")
+    # pkl_filename = datetime.datetime.now().strftime(f"./corpus/zama_{data_name}(%m%d-%H%M%S).pkl")
     pkl_filename = f"./corpus/zama_{data_name}.pkl"
     with open(pkl_filename, 'wb') as fp:
         pickle.dump(result_tuple, fp)
