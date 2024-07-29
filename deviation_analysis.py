@@ -119,7 +119,7 @@ def differenceComparison(filename):
 
     plt.rcParams["font.family"] = "Times New Roman"
 
-    # plt.hist(diff_metric_list, bins=5, color='blue', alpha=0.3, label="Deviation")
+    plt.hist(diff_metric_list, bins=5, color='blue', alpha=0.3, label="Deviation")
     plt.hist(same_metric_list, bins=50, color='red', alpha=0.3, label="Normal")
 
     plt.title("Difference Value Comparison", fontsize=20)
@@ -142,7 +142,7 @@ if __name__ == "__main__":
     # secondClassRatio("ori_helayer_mnist")
 
     # Figure 1
-    # marginComparisonFigure("ori_helayer_credit")
+    marginComparisonFigure("ori_helayer_credit")
 
     # Figure #
-    differenceComparison("ori_helayer_mnist")
+    # differenceComparison("ori_helayer_mnist")

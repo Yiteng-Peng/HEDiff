@@ -233,15 +233,15 @@ def PatternEffect(data_name, filename, label_tag, close_tag, noise_bar):
 
 
 if __name__ == "__main__":
-    PatternEffect("mnist", "ts_mnist_large", True, "topk", noise_bar = 0.05)
-    PatternEffect("mnist", "ts_mnist_large", False, "topk", noise_bar = 0.05)
-    PatternEffect("mnist", "ts_mnist_large", True, "random", noise_bar = 0.05)
-    PatternEffect("mnist", "ts_mnist_large", False, "random", noise_bar = 0.05)
+    PatternEffect("mnist", "ts_mnist", True, "topk", noise_bar = 0.05)
+    PatternEffect("mnist", "ts_mnist", False, "topk", noise_bar = 0.05)
+    PatternEffect("mnist", "ts_mnist", True, "random", noise_bar = 0.05)
+    PatternEffect("mnist", "ts_mnist", False, "random", noise_bar = 0.05)
 
-    PatternEffect("digits", "ts_digits_large", True, "topk", noise_bar = 0.05)
-    PatternEffect("digits", "ts_digits_large", False, "topk", noise_bar = 0.05)
-    PatternEffect("digits", "ts_digits_large", True, "random", noise_bar = 0.05)
-    PatternEffect("digits", "ts_digits_large", False, "random", noise_bar = 0.05)
+    PatternEffect("digits", "ts_digits", True, "topk", noise_bar = 0.05)
+    PatternEffect("digits", "ts_digits", False, "topk", noise_bar = 0.05)
+    PatternEffect("digits", "ts_digits", True, "random", noise_bar = 0.05)
+    PatternEffect("digits", "ts_digits", False, "random", noise_bar = 0.05)
 
     PatternEffect("bank", "ts_bank", True, "topk", noise_bar = 0.03)
     PatternEffect("bank", "ts_bank", False, "topk", noise_bar = 0.03)
