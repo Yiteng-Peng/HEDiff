@@ -2,7 +2,7 @@
 
 ## Paper
 
-**Testing and Understanding Deviation Behaviors in HE-hardened Machine Learning Models**
+**Testing and Understanding Deviation Behaviors in FHE-hardened Machine Learning Models**
 
 ## Run
 
